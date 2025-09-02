@@ -1,0 +1,25 @@
+---
+import "../styles/global.css";
+import { Font } from "astro:assets";
+const { title = "Portfolio" } = Astro.props;
+---
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <Font cssVariable="--font-roboto" preload />
+  </head>
+  <body class="bg-neutral-950 text-neutral-100 antialiased min-h-screen flex">
+    <div class="">
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: var(--font-roboto);
+  }
+</style>

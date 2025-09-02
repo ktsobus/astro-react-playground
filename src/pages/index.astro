@@ -1,16 +1,27 @@
 ---
-
+import Base from "../layouts/Base.astro";
+import SplitText from "../components/SplitText.jsx";
+const handleAnimationComplete = () => {
+  console.log("All letters have animated!");
+};
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base title="Test">
+  <div class="">
+    <SplitText
+      text="Hello, GSAP!"
+      className="text-2xl font-semibold text-center"
+      delay={100}
+      duration={0.6}
+      ease="power3.out"
+      splitType="chars"
+      from={{ opacity: 0, y: 40 }}
+      to={{ opacity: 1, y: 0 }}
+      threshold={0.1}
+      rootMargin="-100px"
+      textAlign="center"
+      onLetterAnimationComplete={handleAnimationComplete}
+	  client:load
+    />
+  </div>
+</Base>
