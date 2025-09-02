@@ -37,6 +37,9 @@ importers:
       lucide-react:
         specifier: ^0.542.0
         version: 0.542.0(react@19.1.1)
+      postprocessing:
+        specifier: ^6.37.7
+        version: 6.37.7(three@0.179.1)
       react:
         specifier: ^19.1.1
         version: 19.1.1
@@ -49,6 +52,9 @@ importers:
       tailwindcss:
         specifier: ^4.1.12
         version: 4.1.12
+      three:
+        specifier: ^0.179.1
+        version: 0.179.1
     devDependencies:
       prettier:
         specifier: 3.6.2
@@ -2514,6 +2520,14 @@ packages:
       }
     engines: { node: ^10 || ^12 || >=14 }
 
+  postprocessing@6.37.7:
+    resolution:
+      {
+        integrity: sha512-3mXzCyhHQvw6cMQKzvHUzQVsy21yC3PZMIeH7KUjx+EVqLWRFPnARh4DEnnFJ+tE08mmIHrrN7UtxVR1Gxbokw==,
+      }
+    peerDependencies:
+      three: ">= 0.157.0 < 0.180.0"
+
   prettier-plugin-astro@0.14.1:
     resolution:
       {
@@ -2844,6 +2858,12 @@ packages:
         integrity: sha512-5S7Va8hKfV7W5U6g3aYxXmlPoZVAwUMy9AOKyF2fVuZa2UD3qZjg578OrLRt8PcNN1PleVaL/5/yYATNL0ICUw==,
       }
     engines: { node: ">=18" }
+
+  three@0.179.1:
+    resolution:
+      {
+        integrity: sha512-5y/elSIQbrvKOISxpwXCR4sQqHtGiOI+MKLc3SsBdDXA2hz3Mdp3X59aUp8DyybMa34aeBwbFTpdoLJaUDEWSw==,
+      }
 
   tiny-inflate@1.0.3:
     resolution:
@@ -4902,6 +4922,10 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+  postprocessing@6.37.7(three@0.179.1):
+    dependencies:
+      three: 0.179.1
+
   prettier-plugin-astro@0.14.1:
     dependencies:
       "@astrojs/compiler": 2.12.2
@@ -5170,6 +5194,8 @@ snapshots:
       minizlib: 3.0.2
       mkdirp: 3.0.1
       yallist: 5.0.0
+
+  three@0.179.1: {}
 
   tiny-inflate@1.0.3: {}
 

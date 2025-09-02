@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import { Font } from "astro:assets";
+import Nav from "../components/Nav.astro";
 const { title = "Portfolio" } = Astro.props;
 ---
 
@@ -12,7 +13,8 @@ const { title = "Portfolio" } = Astro.props;
     <Font cssVariable="--font-roboto" preload />
   </head>
   <body class="bg-neutral-950 text-neutral-100 antialiased min-h-screen flex">
-    <div class="">
+    <div class="h-screen relative w-full">
+      <Nav />
       <slot />
     </div>
   </body>
